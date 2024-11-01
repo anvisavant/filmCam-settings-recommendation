@@ -15,18 +15,18 @@ def display_film_data(selected_film):
         print(f"\nFilm Type: {selected_film}")
         print("Lighting Conditions:", ', '.join(data['lighting_conditions']))
         print("\nRecommended Settings:")
-        for i, setting in enumerate(data['recommended_settings'], 1):
-            print(f"  Setting {i}:")
-            print(f"    Lighting: {data['lighting_conditions'][i-1]}")
-            print(f"    Shutter Speed: {setting['shutter_speed']}")
-            print(f"    Aperture: {setting['aperture']}")
-            print(f"    ISO: {setting['ISO']}")
-        print("\nDescription:", data['description'])
+        for setting in data['recommended_settings']:
+            print(f"  Lighting: {setting['lighting']}")
+            print(f"  Shutter Speed: {setting['shutter_speed']}")
+            print(f"  Aperture: {setting['aperture']}")
+            print(f"  ISO: {setting['ISO']}")
+            print()
+        print("Description:", data['description'])
     else:
         print("Film type not found.")
 
 def main():
-    print("Hi!! Welcome to the Film Photography Exposure Recommender!")
+    print("Welcome to the Film Photography Exposure Recommender!")
     
     while True:
         user_input = input("\nEnter the beginning of a film type (or 'quit' to exit): ").strip()
@@ -52,7 +52,7 @@ def main():
             elif choice == "":
                 continue
             else:
-                print("Hmm, I dont seem to have data on that. Please try again.")
+                print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
