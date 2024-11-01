@@ -1,0 +1,28 @@
+## Program Functionality
+
+What does your program do?
+The Film Photography Exposure Recommender is a command-line tool designed to help film photographers determine optimal camera settings. It suggests aperture, shutter speed, and other relevant settings based on user inputs such as film type, lighting conditions, and desired depth of field.
+
+## Data Requirements
+
+What data do you need?
+- **Film Types and ISO Ratings:** Information about different film stocks and their characteristics, including ISO sensitivity.
+- **Lighting Conditions:** Common scenarios like sunny, overcast, indoor, and night conditions.
+- **Exposure Settings:** Typical aperture and shutter speed combinations for various lighting situations.
+- **User Preferences:** Data on desired depth of field and subject movement to tailor recommendations.
+
+## User Interaction
+
+What questions will you ask the user?
+1. What type of film are you using? (e.g., Portra 400)
+2. What are the current lighting conditions? (e.g., sunny, overcast, indoor)
+3. What is your desired depth of field? (e.g., shallow, deep)
+4. Is your subject static or moving?
+
+## Recommendation Logic
+
+How do the above questions return a recommendation?
+1. **Film Type and ISO:** Determines the base sensitivity of the film to light, influencing exposure settings.
+2. **Lighting Conditions:** Adjusts the baseline settings using rules like Sunny 16 to accommodate different lighting scenarios.
+3. **Depth of Field Preference:** Suggests aperture settings that achieve the desired depth of field (e.g., wider apertures for shallow depth).
+4. **Subject Movement:** Recommends appropriate shutter speeds to freeze or blur motion as needed.
